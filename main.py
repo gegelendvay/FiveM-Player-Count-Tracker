@@ -15,9 +15,11 @@ for i in servers:
     try:
         server, color = i[0], i[2]
         res = req.get(f"http://{i[1]}:40120/chartData/svMain").json()
-        xAxis = (list(range(0, len(res))))
+        xAxis = list(range(0, 360))
         for i in res:
             yAxis.append(i["clients"])
+        while len(yAxis) != 360:
+            yAxis.insert(0, 0)
         average = round(sum(yAxis)/len(yAxis), 2)
         plt.plot(xAxis, yAxis, label=f'{server} - {average}', color=color)
     except Exception as e:

@@ -10,6 +10,8 @@ Once you are done installing the required modules, set up the servers you wish t
 
 If the IPv4 address is hidden behind a reverse proxy, open a terminal, and write the following: `ping exampleserver.com`
 
+Another option would be to go to https://servers-frontend.fivem.net/api/servers/single/CODE, replace the CODE with the 6 charachter long FiveM server ID, and copy the value from `connectEndPoints` without the port.
+
 ## Updates
 Ideas on how to further improve the program can be shared using the Issues or Pull Requests tabs in the repository page.
 - [ ] Auto refresh
